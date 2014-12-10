@@ -1,0 +1,20 @@
+<div class="container" ng-controller="CollarsController as collars">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Material</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="collar in collars.collars">
+                <td>{{collar.name}}</td>
+                <td>{{collar.material}}</td>
+                <td>{{collar.description}}</td>
+                <td>{{collar.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

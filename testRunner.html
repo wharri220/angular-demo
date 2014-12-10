@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./mocha-chai/mocha.css" />
+</head>
+<body>
+<script src="./mocha-chai/mocha.js"></script>
+<script src="./mocha-chai/chai.js"></script>
+
+<script>mocha.setup('bdd');</script>
+
+<!-- include your files here -->
+
+<script src="./angular/angular.min.js"></script>
+<script src="./angular/angular-route.min.js"></script>
+<script src="./angular/angular-mocks.js"></script>
+
+<!-- End of your files -->
+
+<div id="mocha"></div>
+
+<script>
+    mocha.run();
+</script>
+
+</body>
+</html>
