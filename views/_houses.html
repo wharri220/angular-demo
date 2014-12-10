@@ -1,0 +1,23 @@
+<div class="container" ng-controller="HousesController as houses">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Material</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="house in houses.houses">
+            <td>{{house.name}}</td>
+            <td>{{house.material}}</td>
+            <td>{{house.description}}</td>
+            <td>{{"$" + house.price + ".00"}}</td>
+            <td>
+                <button class="btn btn-default" ng-click="houses.addToCart(house)">Add To Cart</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

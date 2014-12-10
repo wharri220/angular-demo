@@ -1,0 +1,9 @@
+<div class="container" ng-controller="CartController as cart">
+    <h1>My Cart</h1>
+    <ul>
+        <li ng-repeat="item in cart.cart.getCartItems()">
+            <p>{{item.name}} , {{"$" + item.price + ".00"}}</p>
+        </li>
+    </ul>
+    <h2>Total Price: {{"$" + cart.cart.getTotal() + ".00"}}</h2>
+</div>

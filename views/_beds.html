@@ -1,0 +1,23 @@
+<div class="container" ng-controller="BedsController as beds">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Material</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="bed in beds.beds">
+            <td>{{bed.name}}</td>
+            <td>{{bed.material}}</td>
+            <td>{{bed.description}}</td>
+            <td>{{"$" + bed.price + ".00"}}</td>
+            <td>
+                <button class="btn btn-default" ng-click="beds.addToCart(bed)">Add To Cart</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

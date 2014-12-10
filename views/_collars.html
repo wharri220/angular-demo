@@ -13,7 +13,10 @@
                 <td>{{collar.name}}</td>
                 <td>{{collar.material}}</td>
                 <td>{{collar.description}}</td>
-                <td>{{collar.price}}</td>
+                <td>{{"$" + collar.price + ".00"}}</td>
+                <td>
+                    <button class="btn btn-default" ng-click="collars.addToCart(collar)">Add To Cart</button>
+                </td>
             </tr>
         </tbody>
     </table>
