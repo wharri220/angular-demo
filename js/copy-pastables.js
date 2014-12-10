@@ -60,3 +60,27 @@ var beds = [
         description: "Basic bed for warmth and comfort"
     }
 ];
+
+<div class="container">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Material</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="treat in treats.treats">
+        <td>{{treat.name}}</td>
+        <td>{{treat.material}}</td>
+        <td>{{treat.description}}</td>
+        <td>{{"$" + treat.price + ".00"}}</td>
+        <td>
+            <button class="btn btn-default" ng-click="treats.addToCart(treat)">Add To Cart</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
